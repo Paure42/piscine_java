@@ -3,9 +3,6 @@ package edu.lyon42.chat.models;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-import user.User;
-
-
 /**
  * Message
  */

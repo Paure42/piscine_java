@@ -13,7 +13,7 @@ public class MessageRepositoryJdbcImpl implements MessageRepository {
     private final Connection dataSource;
     private final UserRepositoryJdbcImpl userRepository;
     private final ChatroomRepository chatroomRepository;
-    private final String QUERY_TEMPLATE = "SELECT * FROM chat.rooms WHERE id=?";
+    private final String QUERY_TEMPLATE = "SELECT * FROM chat.messages WHERE id=?";
 
     public MessageRepositoryJdbcImpl(Connection dataSource,
                                      UserRepositoryJdbcImpl userRepository,

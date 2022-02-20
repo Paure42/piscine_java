@@ -5,6 +5,8 @@ import edu.lyon42.chat.repositories.MessageRepository;
 import edu.lyon42.chat.repositories.MessageRepositoryJdbcImpl;
 import edu.lyon42.chat.repositories.UserRepositoryJdbcImpl;
 
+import com.zaxxer.hikari.HikariDataSource;
+import com.zaxxer.hikari.HikariConfig;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,7 +53,7 @@ public class Program {
 
     private static void runQueriesFromFile(Connection connection, String filename) throws FileNotFoundException {
         Scanner scanner = new Scanner(
-                new File(System.getProperty("user.dir") + "../../../../../ressources/" + filename))
+                new File(System.getProperty("user.dir") + "/../../ressources/" + filename))
                 .useDelimiter(";");
         try {
             while (scanner.hasNext()) {
