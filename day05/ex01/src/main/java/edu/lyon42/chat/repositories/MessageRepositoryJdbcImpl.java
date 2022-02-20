@@ -12,11 +12,15 @@ public class MessageRepositoryJdbcImpl implements MessageRepository {
 
     private final Connection dataSource;
     private final UserRepositoryJdbcImpl userRepository;
+    private final ChatroomRepository chatroomRepository;
     private final String QUERY_TEMPLATE = "SELECT * FROM chat.rooms WHERE id=?";
 
-    public MessageRepositoryJdbcImpl(Connection dataSource, UserRepositoryJdbcImpl userRepository) {
+    public MessageRepositoryJdbcImpl(Connection dataSource,
+                                     UserRepositoryJdbcImpl userRepository,
+                                     ChatroomRepository chatroomRepository) {
         this.dataSource = dataSource;
         this.userRepository = userRepository;
+        this.chatroomRepository = chatroomRepository;
     }
 
     @Override

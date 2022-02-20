@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class User {
 
-    public User(int id,
+    public User(long id,
                 String login,
                 String password,
                 List<Chatroom> createdRooms,
@@ -17,10 +17,10 @@ public class User {
         this.createdRooms = createdRooms;
         this.rooms = rooms;
     }
-    public int getId() {
+    public long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     public String getLogin() {
@@ -76,10 +76,10 @@ public class User {
                 ", password='" + password + '\'' +
                 ", createdRooms=" + createdRooms +
                 ", rooms=" + rooms +
-                '}';)
+                '}');
             }
 
-    private int id;
+    private long id;
     private String login;
     private String password;
     private List<Chatroom> createdRooms;

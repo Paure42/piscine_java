@@ -11,7 +11,7 @@ import user.User;
  */
 public class Message {
 
-    public Message(int id,
+    public Message(long id,
                    User author,
                    Chatroom room,
                    String text,
@@ -23,10 +23,10 @@ public class Message {
         this.messageDateTime = messageDateTime;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     public User getAuthor() {
@@ -85,7 +85,7 @@ public class Message {
                 ", messageDateTime=" + messageDateTime);
     }
 
-    private int id;
+    private long id;
     private User author;
     private Chatroom room;
     private String text;

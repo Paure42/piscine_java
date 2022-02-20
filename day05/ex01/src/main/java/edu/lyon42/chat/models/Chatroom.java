@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Chatroom {
 
-    public Chatroom(int id,
+    public Chatroom(long id,
                     String name,
                     User owner,
                     List<Message> messages) {
@@ -14,10 +14,10 @@ public class Chatroom {
         this.owner = owner;
         this.messages = messages;
     }
-    public int getId() {
+    public long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     public String getName() {
@@ -69,7 +69,7 @@ public class Chatroom {
 
 
 
-    private int id;
+    private long id;
     private String name;
     private User owner;
     private List<Message> messages;

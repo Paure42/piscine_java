@@ -6,13 +6,12 @@ import edu.lyon42.chat.repositories.MessageRepositoryJdbcImpl;
 import edu.lyon42.chat.repositories.UserRepositoryJdbcImpl;
 
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
+
 
 
 public class Program {
@@ -28,8 +27,7 @@ public class Program {
 
         UserRepositoryJdbcImpl userRep = new UserRepositoryJdbcImpl(connection);
         ChatroomRepositoryJdbcImpl chatRep = new ChatroomRepositoryJdbcImpl(connection, userRep);
-        MessagesRepository msgRep = new MessagesRepositoryJdbcImpl(connection, userRep, chatRep);
-
+        MessageRepository msgRep = new MessageRepositoryJdbcImpl(connection, userRep, chatRep);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a message ID:");
         Long id = scanner.nextLong();

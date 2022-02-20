@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
-
+import java.util.ArrayList;
 import edu.lyon42.chat.models.Chatroom;
 
 public class ChatroomRepositoryJdbcImpl implements ChatroomRepository {
